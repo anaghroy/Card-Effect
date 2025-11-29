@@ -2,6 +2,11 @@
   font-family: font;
   src: url(./transcity.regular.otf);
 }
+@mixin centerFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 * {
   margin: 0;
   padding: 0;
@@ -21,33 +26,32 @@ body {
   background-image: url(./background.jpg);
   background-position: center;
   background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centerFlex;
   .box {
-    width: 500px;
+    max-width: 500px;
     height: 500px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    @include centerFlex;
     flex-direction: column;
+    gap: 10px;
     border-radius: 20px;
     padding: 10px 10px;
-    overflow: hidden;
+    border: 5px solid transparent;
+    // padding-inline: 10px;
+    // padding-bottom: 10px;
+    // overflow: hidden;
     background: linear-gradient(
           to bottom right,
-          #080A09,
-          #252726,
-          #252726,
-          #080A09
+          #8c6055,
+          #2b1311,
+          #2b1311,
+          #8c6055
         )
         content-box,
-      conic-gradient(from var(--rotate), #122232, #dcc88a, #122232, #dcc88a)
+      conic-gradient(from var(--rotate), #915270, #ef755d, #f7b48f, #fff3c0)
         padding-box;
     animation: changeBorder 10s linear infinite;
     img {
       width: 60%;
-      //   height: 100%;
       object-fit: cover;
       margin-top: -10%;
     }
@@ -65,7 +69,8 @@ body {
       // -webkit-background-clip: text;
       // background-clip: text;
       font-family: font;
-      color: #E7DAC7;
+      font-weight: 400;
+      color: #e7dac7;
       letter-spacing: 2px;
     }
   }

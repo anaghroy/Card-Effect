@@ -25,16 +25,17 @@ body {
   justify-content: center;
 }
 body .box {
-  width: 500px;
+  max-width: 500px;
   height: 500px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
   flex-direction: column;
+  gap: 10px;
   border-radius: 20px;
   padding: 10px 10px;
-  overflow: hidden;
-  background: linear-gradient(to bottom right, #080A09, #252726, #252726, #080A09) content-box, conic-gradient(from var(--rotate), #122232, #dcc88a, #122232, #dcc88a) padding-box;
+  border: 5px solid transparent;
+  background: linear-gradient(to bottom right, #8c6055, #2b1311, #2b1311, #8c6055) content-box, conic-gradient(from var(--rotate), #915270, #ef755d, #f7b48f, #fff3c0) padding-box;
   animation: changeBorder 10s linear infinite;
 }
 body .box img {
@@ -51,7 +52,8 @@ body .box p {
   margin-top: -20%;
   text-align: center;
   font-family: font;
-  color: #E7DAC7;
+  font-weight: 400;
+  color: #e7dac7;
   letter-spacing: 2px;
 }
 
